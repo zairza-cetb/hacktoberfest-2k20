@@ -2,7 +2,5 @@
 ### Examples of some games
 
 > Quiz
-<br>
 > Stone-paper-scissor
-<br>
 > Tic-tac-toe
