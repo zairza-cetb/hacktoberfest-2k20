@@ -18,7 +18,7 @@ def subSum(arr, n, sum):
         print("No subarray found") 
         return 0
 #Let the array and sum be taken as:-
-arr=[2,5,3,8,13,1,6,23,9]
-sum= 24
+arr=[1,2,3,5,6,8,9,13,24]
+sum= 23
 l=len(arr)
 subSum(arr,l,sum)
