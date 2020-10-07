@@ -1,24 +1,25 @@
-def subSum(arr, n, sum):
-        ar=[]
-        for i in range(l): 
-            curr_sum = arr[i] 
-            j = i + 1
-            while(j<=n): 
-                if(curr_sum == sum): 
-                    print("the sub array is")
-                    while(i<j):
-                        ar.append(arr[i])
-                        i=i+1
-                    print(ar)
-                    return 1
-                if(curr_sum > sum or j == n): 
-                    break
-                curr_sum = curr_sum + arr[j] 
-                j += 1
-        print("No subarray found") 
-        return 0
-#Let the array and sum be taken as:-
-arr=[1,2,3,5,6,8,9,13,24]
-sum= 23
+arr=[5,3,9,2,8,24,1,2,6]
+sum= 33
 l=len(arr)
-subSum(arr,l,sum)
+ar=[]
+currSum = arr[0]
+start=0
+end=0
+def ss(s,e):
+    while(s<=e):
+        ar.append(arr[s])
+        s=s+1
+
+while (end < l):
+    if (currSum == sum):
+        ss(start,end)
+        break
+    if (currSum <= sum):
+        end=end+1
+        if (end < l):
+            currSum = currSum + arr[end]
+    else:
+        currSum = currSum - arr[start]
+        start=start+1
+print(ar)
+
